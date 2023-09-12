@@ -18,6 +18,12 @@ namespace Orai230912
             var v = r.Split(';');
             Nev = v[0];
             Kategoria = v[1] == "Felnott ferfi";
+            Egyesulet = v[2] == "n.a." ? null : v[2];
+            Pontszamok = new int[8];
+            for (int i = 0; i < Pontszamok.Length; i++)
+            {
+                Pontszamok[i] = int.Parse(v[i+3]);
+            }
         }
     }
 }
