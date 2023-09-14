@@ -41,6 +41,15 @@ namespace Orai230912
             {
                 if (v.Kategoria) sw.WriteLine($"{v.Nev} {v.Osszpontszam};");
             }
+
+            Console.WriteLine("8. feladat:");
+            var egyesuletek = sportolok
+                .GroupBy(v => v.Egyesulet)
+                .Where(x => x.Count() > 3 && x.Key is not null);
+            foreach (var kvp in egyesuletek)
+            {
+                Console.WriteLine($"\t{kvp.Key} - {kvp.Count()} fő");
+            }
         }
     }
 }
