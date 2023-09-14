@@ -22,6 +22,7 @@ namespace Orai230912
             float na = nsz / (float)sportolok.Count() * 100;
             Console.WriteLine($"4. feladat: Női versenyzők aránya: {na:0.00}%");
 
+            Console.WriteLine("6. feladat");
             var noiBajnok = sportolok
                 .Where(v => !v.Kategoria)
                 .OrderBy(v => v.Osszpontszam)
